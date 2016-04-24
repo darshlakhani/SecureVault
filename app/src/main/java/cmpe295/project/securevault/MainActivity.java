@@ -1,6 +1,7 @@
 package cmpe295.project.securevault;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,7 +15,9 @@ import android.widget.ListView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,23 +28,29 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+/*                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                Intent uploadAct = new Intent(MainActivity.this, DirectoryView.class);
+
+                startActivity(uploadAct);
+
             }
         });
 
         final ListView lvUploadList = (ListView) findViewById(R.id.lvUploadList);
-        ArrayList<String> uList = new ArrayList<String>();
+       /* ArrayList<String> uList = new ArrayList<String>();
         uList.add("One");
-        uList.add("Two");
+        uList.add("Two");*/
 
-        ArrayAdapter<String> adapter = new UploadListAdapter(getApplicationContext(),R.layout.uploadlist_view,uList);
+        DbHandler db = new DbHandler(this);
+
+        List<AppUploadedInfo> uploadedApp = db.getAllApp();
+
+        ArrayAdapter<AppUploadedInfo> adapter = new UploadListAdapter(getApplicationContext(),R.layout.uploadlist_view,uploadedApp);
         lvUploadList.setAdapter(adapter);
     }
 
