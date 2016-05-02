@@ -80,4 +80,13 @@ public class DbHandler extends SQLiteOpenHelper {
         return pack;
 
     }
+
+    public  void updateStatus(String st, String pname)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues vl = new ContentValues();
+        vl.put(key_status, st);
+        db.update(table_name,vl, key_pname+"=?",new String[]{pname});
+        db.close();
+    }
 }

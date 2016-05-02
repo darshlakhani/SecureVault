@@ -19,10 +19,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 /**
  * Created by Robin on 4/18/2016.
  */
-public class DirectoryView extends AppCompatActivity {
+public class DirectoryView extends AppCompatActivity implements Callback<TestResp> {
     private String path;
     ListView lvDirectory;
     DbHandler db;
@@ -31,6 +37,7 @@ public class DirectoryView extends AppCompatActivity {
     int position2;
     String[] pref = {"Contacts", "SMS", "Camera"};
     String selected_pref ="";
+    public static String API = "http://www.mocky.io";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +118,9 @@ public class DirectoryView extends AppCompatActivity {
                 builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, final int id) {
                         //cancel click
+
+                       retroapitest();
+
                         for (int i =0; i<mSelectedItems.size(); i++){
                             selected_pref = selected_pref +","+pref[i];
                         }
@@ -129,4 +139,31 @@ public class DirectoryView extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onResponse(Call<TestResp> call, retrofit2.Response<TestResp> response) {
+        db.updateStatus("Scanned","com.google.android.apps.docs.editors.docs");
+        Intent mactivity = new Intent(DirectoryView.this, MainActivity.class);
+        startActivity(mactivity);
+
+    }
+
+    @Override
+    public void onFailure(Call<TestResp> call, Throwable t) {
+        db.updateStatus("Scan Failed","com.google.android.apps.docs.editors.docs");
+        Intent mactivity = new Intent(DirectoryView.this, MainActivity.class);
+        startActivity(mactivity);
+
+    }
+
+    private void retroapitest(){
+        Retrofit rt = new Retrofit.Builder()
+                .baseUrl(API)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        UploadApis rtapi = rt.create(UploadApis.class);
+
+        Call<TestResp> cl = rtapi.checkApi("test");
+        cl.enqueue(this);
+    }
 }
