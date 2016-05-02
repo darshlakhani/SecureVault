@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">SecureVault</string>
     <string name="action_settings">Settings</string>
     <string-array name="app_category">
@@ -9,4 +10,6 @@
         <item>Finance</item>
         <item>Media</item>
     </string-array>
+    <string name="title_activity_result_view">ResultView</string>
+    <string name="title_activity_critical_detail_view">CriticalDetailView</string>
 </resources>

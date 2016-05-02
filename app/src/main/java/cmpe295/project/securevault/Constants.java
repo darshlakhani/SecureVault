@@ -5,6 +5,12 @@ package cmpe295.project.securevault;
  */
 public class Constants {
 
+
+       public  static int CRITICAL_INDEX = 0;
+        public static int WARNING_INDEX = 1;
+        public static int NOTICE_INDEX = 2;
+
+
     public static String jsonStrings = "{\n" +
             "\t\"time_finish_analyze\": {\n" +
             "    \t\"$date\": 1461543139323\n" +
