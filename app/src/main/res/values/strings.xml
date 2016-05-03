@@ -12,4 +12,6 @@
     </string-array>
     <string name="title_activity_result_view">ResultView</string>
     <string name="title_activity_critical_detail_view">CriticalDetailView</string>
+    <string name="title_activity_warning_detail_view">WarningDetailView</string>
+    <string name="title_activity_notice_detail_view">NoticeDetailView</string>
 </resources>

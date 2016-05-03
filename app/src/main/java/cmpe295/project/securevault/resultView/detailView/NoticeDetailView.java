@@ -13,9 +13,9 @@ import cmpe295.project.securevault.ExpandableListAdapter;
 import cmpe295.project.securevault.R;
 
 /**
- * Created by raoa on 5/1/2016.
+ * Created by raoa on 5/2/2016.
  */
-public class WarningDetailView extends AppCompatActivity {
+public class NoticeDetailView extends AppCompatActivity {
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
@@ -25,7 +25,7 @@ public class WarningDetailView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warning_detail_view);
+        setContentView(R.layout.activity_notice_detail_view);
 
         expListView = (ExpandableListView) findViewById(R.id.expandableListViewResult);
         // preparing list data and add it into list view

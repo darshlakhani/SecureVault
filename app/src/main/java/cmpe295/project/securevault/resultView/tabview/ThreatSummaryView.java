@@ -1,6 +1,5 @@
 package cmpe295.project.securevault.resultView.tabview;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -26,9 +24,10 @@ import java.util.ArrayList;
 
 import cmpe295.project.securevault.Constants;
 import cmpe295.project.securevault.R;
-import cmpe295.project.securevault.resultView.ChartResult;
-import cmpe295.project.securevault.resultView.ResultView;
 import cmpe295.project.securevault.resultView.detailView.CriticalDetailView;
+
+import cmpe295.project.securevault.resultView.detailView.NoticeDetailView;
+import cmpe295.project.securevault.resultView.detailView.WarningDetailView;
 
 /**
  * Created by raoa on 4/30/2016.
@@ -155,8 +154,16 @@ public class ThreatSummaryView extends Fragment {
                         startActivity(intent);
 
                     }else if(dataIndex == Constants.WARNING_INDEX){
+                        Intent intent = new Intent(getContext(), WarningDetailView.class);
+
+                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        startActivity(intent);
 
                     }else if(dataIndex  == Constants.NOTICE_INDEX){
+                        Intent intent = new Intent(getContext(), NoticeDetailView.class);
+
+                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        startActivity(intent);
 
                     }
                     break;
