@@ -21,6 +21,7 @@ public class TabPagerAdapter  extends FragmentStatePagerAdapter {
         switch (position) {
             case 0:
                 ThreatSummaryView tab1 = new ThreatSummaryView();
+                //tab1.se
                 return tab1;
             case 1:
                 PreferenceView tab2 = new PreferenceView();
