@@ -23,6 +23,7 @@ public class CriticalDetailView  extends AppCompatActivity {
     static List<String> listDataHeader;
     static HashMap<String, List<String>> listDataChild;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +79,7 @@ public class CriticalDetailView  extends AppCompatActivity {
         public long getChildId(int groupPosition, int childPosition) {
 
             System.out.println("Child Clicked "+groupPosition+" "+childPosition);
+            Object childObject = getChild(groupPosition,childPosition);
             return childPosition;
         }
     }

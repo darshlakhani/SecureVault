@@ -898,7 +898,7 @@ public class Constants {
             "}\n" +
             "";
 
-        String finalJson = "{\n" +
+        public static String finalJson = "{\n" +
                 "    \"time_finish_analyze\": {\n" +
                 "        \"$date\": 1461629757843\n" +
                 "    },\n" +
