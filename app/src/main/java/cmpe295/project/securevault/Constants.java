@@ -897,4 +897,882 @@ public class Constants {
             "\t\"analyze_status\": \"success\"\n" +
             "}\n" +
             "";
+
+        String finalJson = "{\n" +
+                "    \"time_finish_analyze\": {\n" +
+                "        \"$date\": 1461629757843\n" +
+                "    },\n" +
+                "    \"package_name\": \"org.wikipedia\",\n" +
+                "    \"notice_vectors\": [\n" +
+                "        \"NATIVE_LIBS_LOADING\",\n" +
+                "        \"PERMISSION_EXPORTED_GOOGLE\",\n" +
+                "        \"DB_SQLITE_JOURNAL\",\n" +
+                "        \"COMMAND_MAYBE_SYSTEM\",\n" +
+                "        \"FILE_DELETE\"\n" +
+                "    ],\n" +
+                "    \"isPreferenceViolated\": true,\n" +
+                "    \"scanCompareResults\": {\n" +
+                "        \"Bkav\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.3.0.7744\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"MicroWorld-eScan\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"12.0.250.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"nProtect\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2016-04-20.01\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"CMC\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.1.0.977\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160415\"\n" +
+                "        },\n" +
+                "        \"CAT-QuickHeal\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"14.00\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"McAfee\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"6.0.6.653\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Malwarebytes\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2.1.1.1115\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"VIPRE\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"48782\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"AegisLab\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"4.2\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"K7AntiVirus\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"9.222.19371\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"BitDefender\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"7.2\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"K7GW\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"9.222.19371\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"TheHacker\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"6.8.0.5.899\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Baidu\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.0.2\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"F-Prot\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"4.7.1.166\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Symantec\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"20151.1.0.32\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"ESET-NOD32\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"13368\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"TrendMicro-HouseCall\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"9.800.0.1009\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Avast\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"8.0.1489.320\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"ClamAV\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"0.98.5.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"GData\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"25\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Kaspersky\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"15.0.1.13\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Alibaba\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"NANO-Antivirus\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.30.8000\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"ViRobot\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2014.3.20.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Rising\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"25.0.0.18\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Ad-Aware\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"3.0.2.1015\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Emsisoft\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"3.5.0.656\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Comodo\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"24847\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"F-Secure\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"11.0.19100.45\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"DrWeb\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"7.0.18.3140\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Zillya\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2.0.0.2800\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"TrendMicro\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"9.740.0.1012\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"McAfee-GW-Edition\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"v2015\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Sophos\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"4.98.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Cyren\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"5.4.16.7\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Jiangmin\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"16.0.100\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Avira\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"8.3.3.4\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Antiy-AVL\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.0.1\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Kingsoft\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2013.8.14.323\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Arcabit\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.0.672\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"SUPERAntiSpyware\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"5.6.0.1032\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Microsoft\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.1.12603.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"AhnLab-V3\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"2016.04.21.00\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"ALYac\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.1.9\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"AVware\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.5.0.42\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"VBA32\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"3.12.26.4\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"Panda\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"4.6.4.2\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160419\"\n" +
+                "        },\n" +
+                "        \"Zoner\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Tencent\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.0.1\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Yandex\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"5.5.1.3\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"Ikarus\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"T3.2.0.9.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Fortinet\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"5.1.220.0\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"AVG\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"16.0.0.4556\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        },\n" +
+                "        \"Baidu-International\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"3.5.1.41473\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160420\"\n" +
+                "        },\n" +
+                "        \"Qihoo-360\": {\n" +
+                "            \"detected\": false,\n" +
+                "            \"version\": \"1.0.0.1120\",\n" +
+                "            \"result\": null,\n" +
+                "            \"update\": \"20160421\"\n" +
+                "        }\n" +
+                "    },\n" +
+                "    \"time_starting_analyze\": {\n" +
+                "        \"$date\": 1461629737607\n" +
+                "    },\n" +
+                "    \"threatQ\": \"RED\",\n" +
+                "    \"apk_filepath_absolute\": \"/home/nikhil/Documents/295B/downloads/org.wikipedia.apk\",\n" +
+                "    \"vector_total_count\": 52,\n" +
+                "    \"platform\": \"Android\",\n" +
+                "    \"critical_vectors\": [\n" +
+                "        \"SSL_URLS_NOT_IN_HTTPS\",\n" +
+                "        \"WEBVIEW_RCE\",\n" +
+                "        \"SSL_CN1\"\n" +
+                "    ],\n" +
+                "    \"time_loading_vm\": 14.649542,\n" +
+                "    \"details\": {\n" +
+                "        \"EXTERNAL_STORAGE\": {\n" +
+                "            \"count\": 3,\n" +
+                "            \"title\": \"External storage access found (Remember DO NOT write important files to external storages):\",\n" +
+                "            \"summary\": \"External Storage Accessing\",\n" +
+                "            \"vector_details\": \"=> Lcom/facebook/common/statfs/StatFsHelper;->ensureInitialized()V (0x26) ---> Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;\\n=> Lnet/hockeyapp/android/Constants;->getHockeyAppStorageDir()Ljava/io/File; (0x0) ---> Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;\\n=> Lnet/hockeyapp/android/tasks/DownloadFileTask;-><init>(Landroid/content/Context; Ljava/lang/String; Lnet/hockeyapp/android/listeners/DownloadFileListener;)V (0x4a) ---> Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;\",\n" +
+                "            \"level\": \"Warning\"\n" +
+                "        },\n" +
+                "        \"HACKER_KEYSTORE_NO_PWD\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"KeyStore\",\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Ignore checking KeyStore protected by password or not because you're not using KeyStore.\",\n" +
+                "            \"summary\": \"KeyStore Protection Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"WEBVIEW_JS_ENABLED\": {\n" +
+                "            \"count\": 1,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"WebView\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Found \\\"setJavaScriptEnabled(true)\\\" in WebView, which could exposed to potential XSS attacks. Please check the web page code carefully and sanitize the output:\",\n" +
+                "            \"level\": \"Warning\",\n" +
+                "            \"summary\": \"WebView Potential XSS Attacks Checking\",\n" +
+                "            \"vector_details\": \"=> Lorg/wikipedia/bridge/CommunicationBridge;-><init>(Landroid/webkit/WebView; Ljava/lang/String;)V (0x58) ---> Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V\"\n" +
+                "        },\n" +
+                "        \"SSL_URLS_NOT_IN_HTTPS\": {\n" +
+                "            \"count\": 2,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"URLs that are NOT under SSL (Total:1):\",\n" +
+                "            \"level\": \"Critical\",\n" +
+                "            \"summary\": \"SSL Connection Checking\",\n" +
+                "            \"vector_details\": \"http://deployment.wikimedia.beta.wmflabs.org/beacon/event\\n    => Lorg/wikipedia/analytics/EventLoggingEvent;-><clinit>()V\"\n" +
+                "        },\n" +
+                "        \"MASTER_KEY\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No Master Key Type I Vulnerability in this APK.\",\n" +
+                "            \"cve_number\": \"CVE-2013-4787\",\n" +
+                "            \"level\": \"Info\",\n" +
+                "            \"summary\": \"Master Key Type I Vulnerability\"\n" +
+                "        },\n" +
+                "        \"USE_PERMISSION_SYSTEM_APP\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No system-level critical use-permission found.\",\n" +
+                "            \"summary\": \"AndroidManifest System Use Permission Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SSL_DEFAULT_SCHEME_NAME\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"DEFAULT_SCHEME_NAME for HttpHost check: OK\",\n" +
+                "            \"summary\": \"SSL Implementation Checking (HttpHost)\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_GROUP_EMPTY_VALUE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"PermissionGroup in permission tag of AndroidManifest sets correctly.\",\n" +
+                "            \"summary\": \"AndroidManifest PermissionGroup Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"FILE_DELETE\": {\n" +
+                "            \"count\": 17,\n" +
+                "            \"title\": \"Everything you delete may be recovered by any user or attacker, especially rooted devices.\\nPlease make sure do not use \\\"file.delete()\\\" to delete essential files.\\nCheck this video: https://www.youtube.com/watch?v=tGw1fxUD-uY\",\n" +
+                "            \"summary\": \"File Unsafe Delete Checking\",\n" +
+                "            \"vector_details\": \"=> Lcom/facebook/cache/disk/DefaultDiskStorage$PurgingVisitor;->postVisitDirectory(Ljava/io/File;)V (0x20) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/cache/disk/DefaultDiskStorage$PurgingVisitor;->visitFile(Ljava/io/File;)V (0x14) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/cache/disk/DefaultDiskStorage;->doRemove(Ljava/io/File;)J (0x1a) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/cache/disk/DiskStorageCache;->deleteTemporaryResource(Lcom/facebook/binaryresource/BinaryResource;)V (0x3e) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/common/file/FileTree;->deleteRecursively(Ljava/io/File;)Z (0x12) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/common/file/FileUtils;->mkdirs(Ljava/io/File;)V (0x1a) ---> Ljava/io/File;->delete()Z\\n=> Lcom/facebook/common/file/FileUtils;->rename(Ljava/io/File; Ljava/io/File;)V (0xc) ---> Ljava/io/File;->delete()Z\\n=> Lcom/jakewharton/disklrucache/DiskLruCache;->deleteIfExists(Ljava/io/File;)V (0xc) ---> Ljava/io/File;->delete()Z\\n=> Lcom/jakewharton/disklrucache/DiskLruCache;->open(Ljava/io/File; I I J)Lcom/jakewharton/disklrucache/DiskLruCache; (0x64) ---> Ljava/io/File;->delete()Z\\n=> Lcom/jakewharton/disklrucache/DiskLruCache;->rebuildJournal()V (0x1ba) ---> Ljava/io/File;->delete()Z\\n=> Lcom/jakewharton/disklrucache/DiskLruCache;->remove(Ljava/lang/String;)Z (0x52) ---> Ljava/io/File;->delete()Z\\n=> Lcom/jakewharton/disklrucache/Util;->deleteContents(Ljava/io/File;)V (0x5e) ---> Ljava/io/File;->delete()Z\\n=> Lcom/squareup/okhttp/internal/io/FileSystem$1;->delete(Ljava/io/File;)V (0x0) ---> Ljava/io/File;->delete()Z\\n=> Lcom/squareup/okhttp/internal/io/FileSystem$1;->deleteContents(Ljava/io/File;)V (0x5c) ---> Ljava/io/File;->delete()Z\\n=> Lnet/hockeyapp/android/tasks/SendFeedbackTask;->clearTemporaryFolder(Ljava/util/HashMap;)V (0x6e) ---> Ljava/io/File;->delete()Z\\n=> Lorg/wikipedia/util/FileUtil;->clearDirectory(Ljava/io/File;)V (0x2a) ---> Ljava/io/File;->delete()Z\\n=> Lorg/wikipedia/util/FileUtil;->delete(Ljava/io/File; Z)V (0x3c) ---> Ljava/io/File;->delete()Z\",\n" +
+                "            \"level\": \"Notice\"\n" +
+                "        },\n" +
+                "        \"HACKER_DB_KEY\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Database\",\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not find using the symmetric key(PRAGMA key) to encrypt the SQLite databases (It's still possible that it might use but we did not find out).\",\n" +
+                "            \"summary\": \"Key for Android SQLite Databases Encryption\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"WEBVIEW_RCE\": {\n" +
+                "            \"count\": 1,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"WebView\",\n" +
+                "                \"Remote Code Execution\"\n" +
+                "            ],\n" +
+                "            \"level\": \"Critical\",\n" +
+                "            \"title\": \"Found a critical WebView \\\"addJavascriptInterface\\\" vulnerability. This method can be used to allow JavaScript to control the host application. \\nThis is a powerful feature, but also presents a security risk for applications targeted to API level JELLY_BEAN(4.2) or below, because JavaScript could use reflection to access an injected object's public fields. Use of this method in a WebView containing untrusted content could allow an attacker to manipulate the host application in unintended ways, executing Java code with the permissions of the host application. \\nReference: \\n  1.\\\"http://developer.android.com/reference/android/webkit/WebView.html#addJavascriptInterface(java.lang.Object, java.lang.String) \\\"\\n  2.https://labs.mwrinfosecurity.com/blog/2013/09/24/webview-addjavascriptinterface-remote-code-execution/\\n  3.http://50.56.33.56/blog/?p=314\\n  4.http://blog.trustlook.com/2013/09/04/alert-android-webview-addjavascriptinterface-code-execution-vulnerability/\\nPlease modify the below code:\",\n" +
+                "            \"summary\": \"WebView RCE Vulnerability Checking\",\n" +
+                "            \"cve_number\": \"CVE-2013-4710\",\n" +
+                "            \"vector_details\": \"=> Lorg/wikipedia/bridge/CommunicationBridge;-><init>(Landroid/webkit/WebView; Ljava/lang/String;)V (0x76) ---> Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object; Ljava/lang/String;)V\"\n" +
+                "        },\n" +
+                "        \"COMMAND_MAYBE_SYSTEM\": {\n" +
+                "            \"count\": 4,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Command\"\n" +
+                "            ],\n" +
+                "            \"title\": \"The app may has the code checking for \\\"root\\\" permission, mounting filesystem operations or monitoring system:\",\n" +
+                "            \"level\": \"Notice\",\n" +
+                "            \"summary\": \"Executing \\\"root\\\" or System Privilege Checking\",\n" +
+                "            \"vector_details\": \"Lorg/wikipedia/staticdata/SpecialAliasData;->setupData()V  => 'su'\\nLcommons/validator/routines/DomainValidator;-><clinit>()V  => 'su'\\nLorg/wikipedia/staticdata/MainPageNameData;->setupData()V  => 'su'\\nLorg/wikipedia/staticdata/FileAliasData;->setupData()V  => 'su'\"\n" +
+                "        },\n" +
+                "        \"SHARED_USER_ID\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"System\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app does not use \\\"android.uid.system\\\" sharedUserId.\",\n" +
+                "            \"summary\": \"AndroidManifest sharedUserId Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"FRAGMENT_INJECTION\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"Did not detect the vulnerability of \\\"Fragment\\\" dynamically loading into \\\"PreferenceActivity\\\" or \\\"SherlockPreferenceActivity\\\"\",\n" +
+                "            \"cve_number\": \"BID 64208, CVE-2013-6271\",\n" +
+                "            \"level\": \"Info\",\n" +
+                "            \"summary\": \"Fragment Vulnerability Checking\"\n" +
+                "        },\n" +
+                "        \"HACKER_PREVENT_SCREENSHOT_CHECK\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect this app has code setting preventing screenshot capturing.\",\n" +
+                "            \"summary\": \"Code Setting Preventing Screenshot Capturing\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_NO_PREFIX_EXPORTED\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No exported components that forgot to add \\\"android:\\\" prefix.\",\n" +
+                "            \"cve_number\": \"CVE-2013-6272\",\n" +
+                "            \"level\": \"Info\",\n" +
+                "            \"summary\": \"AndroidManifest Exported Lost Prefix Checking\"\n" +
+                "        },\n" +
+                "        \"SENSITIVE_DEVICE_ID\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Sensitive_Information\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect this app is getting the \\\"device id(IMEI)\\\" by \\\"TelephonyManager.getDeviceId()\\\" approach.\",\n" +
+                "            \"summary\": \"Getting IMEI and Device ID\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"MODE_WORLD_READABLE_OR_MODE_WORLD_WRITEABLE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No security issues \\\"MODE_WORLD_READABLE\\\" or \\\"MODE_WORLD_WRITEABLE\\\" found on 'openOrCreateDatabase' or 'openOrCreateDatabase2' or 'getDir' or 'getSharedPreferences' or 'openFileOutput'\",\n" +
+                "            \"summary\": \"App Sandbox Permission Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SSL_CN1\": {\n" +
+                "            \"count\": 1,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app allows Self-defined HOSTNAME VERIFIER to accept all Common Names(CN). \\nThis is a critical vulnerability and allows attackers to do MITM attacks with his valid certificate without your knowledge. \\nCase example: \\n(1)http://osvdb.org/96411 \\n(2)http://www.wooyun.org/bugs/wooyun-2010-042710 \\n(3)http://www.wooyun.org/bugs/wooyun-2010-052339\\nAlso check Google doc: http://developer.android.com/training/articles/security-ssl.html (Caution: Replacing HostnameVerifier can be very dangerous). \\nOWASP Mobile Top 10 doc: https://www.owasp.org/index.php/Mobile_Top_10_2014-M3\\nCheck this book to see how to solve this issue: http://goo.gl/BFb65r \\n\\nTo see what's the importance of Common Name(CN) verification.\\nUse Google Chrome to navigate:\\n - https://www.google.com   => SSL certificate is valid\\n - https://60.199.175.158/  => This is the IP address of google.com, but the CN is not match, making the certificate invalid. You still can go Google.com but now you cannot distinguish attackers from normal users\\n\\nPlease check the code inside these methods:\",\n" +
+                "            \"level\": \"Critical\",\n" +
+                "            \"summary\": \"SSL Implementation Checking (Verifying Host Name in Custom Classes)\",\n" +
+                "            \"vector_details\": \"Lcom/github/kevinsawicki/http/HttpRequest$2;->verify(Ljava/lang/String; Ljavax/net/ssl/SSLSession;)Z\"\n" +
+                "        },\n" +
+                "        \"SSL_CN3\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect SSLSocketFactory by insecure method \\\"getInsecure\\\".\",\n" +
+                "            \"summary\": \"SSL Implementation Checking (Insecure component)\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SSL_CN2\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Critical vulnerability \\\"ALLOW_ALL_HOSTNAME_VERIFIER\\\" field setting or \\\"AllowAllHostnameVerifier\\\" class instance not found.\",\n" +
+                "            \"summary\": \"SSL Implementation Checking (Verifying Host Name in Fields)\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_NORMAL\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No default or \\\"normal\\\" protection level customized permission found (AndroidManifest.xml).\",\n" +
+                "            \"summary\": \"AndroidManifest Normal ProtectionLevel of Permission Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"DB_DEPRECATED_USE1\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Database\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Ignore checking \\\"SQLiteDatabase:beginTransactionNonExclusive\\\" because your set minSdk >= 11.\",\n" +
+                "            \"summary\": \"SQLiteDatabase Transaction Deprecated Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_IMPLICIT_SERVICE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Implicit_Intent\"\n" +
+                "            ],\n" +
+                "            \"title\": \"No dangerous implicit service.\",\n" +
+                "            \"summary\": \"Implicit Service Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_INTENT_FILTER_MISCONFIG\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"\\\"intent-filter\\\" of AndroidManifest.xml check OK.\",\n" +
+                "            \"summary\": \"AndroidManifest \\\"intent-filter\\\" Settings Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"HTTPURLCONNECTION_BUG\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"Ignore checking \\\"http.keepAlive\\\" because you're not using \\\"HttpURLConnection\\\" and min_Sdk > 8.\",\n" +
+                "            \"summary\": \"HttpURLConnection Android Bug Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_EXPORTED_GOOGLE\": {\n" +
+                "            \"count\": 3,\n" +
+                "            \"title\": \"Found \\\"exported\\\" components(except for Launcher) for receiving Google's \\\"Android\\\" actions (AndroidManifest.xml):\",\n" +
+                "            \"summary\": \"AndroidManifest Exported Components Checking 2\",\n" +
+                "            \"vector_details\": \"  receiver => org.wikipedia.widgets.WidgetProviderSearch\\n  receiver => org.wikipedia.widgets.WidgetProviderFeaturedPage\\n  receiver => org.wikipedia.analytics.InstallReceiver\",\n" +
+                "            \"level\": \"Notice\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_DANGEROUS\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No \\\"dangerous\\\" protection level customized permission found (AndroidManifest.xml).\",\n" +
+                "            \"summary\": \"AndroidManifest Dangerous ProtectionLevel of Permission Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"FRAMEWORK_MONODROID\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Framework\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app is NOT using MonoDroid Framework (http://xamarin.com/android).\",\n" +
+                "            \"summary\": \"Framework - MonoDroid\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"WEBVIEW_ALLOW_FILE_ACCESS\": {\n" +
+                "            \"count\": 2,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"WebView\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Found \\\"setAllowFileAccess(true)\\\" or not set(enabled by default) in WebView. The attackers could inject malicious script into WebView and exploit the opportunity to access local resources. This can be mitigated or prevented by disabling local file system access. (It is enabled by default)\\nNote that this enables or disables file system access only. Assets and resources are still accessible using file:///android_asset and file:///android_res.\\nThe attackers can use \\\"mWebView.loadUrl(\\\"file:///data/data/[Your_Package_Name]/[File]\\\");\\\" to access app's local file.\\nReference: (1)https://labs.mwrinfosecurity.com/blog/2012/04/23/adventures-with-android-webviews/\\n           (2)http://developer.android.com/reference/android/webkit/WebSettings.html#setAllowFileAccess(boolean)\\nPlease add or modify \\\"yourWebView.getSettings().setAllowFileAccess(false)\\\" to your WebView:\",\n" +
+                "            \"level\": \"Warning\",\n" +
+                "            \"summary\": \"WebView Local File Access Attacks Checking\",\n" +
+                "            \"vector_details\": \"Lorg/wikipedia/bridge/CommunicationBridge;-><init>(Landroid/webkit/WebView; Ljava/lang/String;)V\\nLorg/wikipedia/page/PageFragment;->updateFontSize()V\"\n" +
+                "        },\n" +
+                "        \"HACKER_BASE64_STRING_DECODE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"No encoded Base64 String or Urls found.\",\n" +
+                "            \"summary\": \"Base64 String Encryption\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"DYNAMIC_CODE_LOADING\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No dynamic code loading(DexClassLoader) found.\",\n" +
+                "            \"summary\": \"Dynamic Code Loading\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SSL_WEBVIEW\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect critical usage of \\\"WebViewClient\\\"(MITM Vulnerability).\",\n" +
+                "            \"summary\": \"SSL Implementation Checking (WebViewClient for WebView)\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"HACKER_SIGNATURE_CHECK\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Signature\",\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect this app is checking the signature in the code.\",\n" +
+                "            \"summary\": \"Getting Signature Code Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"DB_SQLCIPHER\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Database\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app is \\\"NOT\\\" using SQLCipher(http://sqlcipher.net/) to encrypt or decrpyt databases.\",\n" +
+                "            \"summary\": \"Android SQLite Databases Encryption (SQLCipher)\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"HACKER_DEBUGGABLE_CHECK\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Debug\",\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect codes for checking \\\"ApplicationInfo.FLAG_DEBUGGABLE\\\" in AndroidManifest.xml.\",\n" +
+                "            \"summary\": \"Codes for Checking Android Debug Mode\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"ALLOW_BACKUP\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"This app has disabled Adb Backup.\",\n" +
+                "            \"summary\": \"AndroidManifest Adb Backup Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"COMMAND\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Command\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app is not using critical function 'Runtime.getRuntime().exec(\\\"...\\\")'.\",\n" +
+                "            \"summary\": \"Runtime Command Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"PERMISSION_PROVIDER_IMPLICIT_EXPORTED\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"No exported \\\"ContentProvider\\\" found (AndroidManifest.xml).\",\n" +
+                "            \"summary\": \"AndroidManifest ContentProvider Exported Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"DB_SQLITE_JOURNAL\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Database\"\n" +
+                "            ],\n" +
+                "            \"level\": \"Notice\",\n" +
+                "            \"title\": \"This app is using Android SQLite databases but it's \\\"NOT\\\" suffering from SQLite Journal Information Disclosure Vulnerability.\",\n" +
+                "            \"summary\": \"Android SQLite Databases Vulnerability Checking\",\n" +
+                "            \"cve_number\": \"CVE-2011-3901\"\n" +
+                "        },\n" +
+                "        \"HACKER_KEYSTORE_LOCATION1\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"KeyStore\",\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not find any possible BKS keystores or certificate keystore file (Notice: It does not mean this app does not use keysotre):\",\n" +
+                "            \"summary\": \"KeyStore File Location\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"NATIVE_LIBS_LOADING\": {\n" +
+                "            \"count\": 2,\n" +
+                "            \"title\": \"Native library loading codes(System.loadLibrary(...)) found:\",\n" +
+                "            \"summary\": \"Native Library Loading Checking\",\n" +
+                "            \"vector_details\": \"[libmapbox-gl.so]\\n=> Lcom/mapbox/mapboxsdk/views/NativeMapView;-><clinit>()V (0x4) ---> Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V\",\n" +
+                "            \"level\": \"Notice\"\n" +
+                "        },\n" +
+                "        \"DB_SEE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Database\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app is \\\"NOT\\\" using SQLite Encryption Extension (SEE) on Android (http://www.sqlite.org/android) to encrypt or decrpyt databases.\",\n" +
+                "            \"summary\": \"Android SQLite Databases Encryption (SQLite Encryption Extension (SEE))\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"KEYSTORE_TYPE_CHECK\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"KeyStore\"\n" +
+                "            ],\n" +
+                "            \"title\": \"KeyStore 'BKS' type check OK\",\n" +
+                "            \"summary\": \"KeyStore Type Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"USE_PERMISSION_ACCESS_MOCK_LOCATION\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"Permission 'android.permission.ACCESS_MOCK_LOCATION' sets correctly.\",\n" +
+                "            \"summary\": \"Unnecessary Permission Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SENSITIVE_SECURE_ANDROID_ID\": {\n" +
+                "            \"count\": 3,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Sensitive_Information\"\n" +
+                "            ],\n" +
+                "            \"title\": \"This app has code getting the 64-bit number \\\"Settings.Secure.ANDROID_ID\\\". \\nANDROID_ID seems a good choice for a unique device identifier. There are downsides: First, it is not 100% reliable on releases of Android prior to 2.2 (Froyo). \\nAlso, there has been at least one widely-observed bug in a popular handset from a major manufacturer, where every instance has the same ANDROID_ID. \\nIf you want to get an unique id for the device, we suggest you use \\\"Installation\\\" framework in the following article. \\nPlease check the reference: http://android-developers.blogspot.tw/2011/03/identifying-app-installations.html \",\n" +
+                "            \"level\": \"Warning\",\n" +
+                "            \"summary\": \"Getting ANDROID_ID\",\n" +
+                "            \"vector_details\": \"=> Lnet/hockeyapp/android/Constants;->loadCrashIdentifier(Landroid/content/Context;)V (0xc) ---> Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver; Ljava/lang/String;)Ljava/lang/String;\\n=> Lnet/hockeyapp/android/tasks/CheckUpdateTask;->getURLString(Ljava/lang/String;)Ljava/lang/String; (0x6c) ---> Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver; Ljava/lang/String;)Ljava/lang/String;\\n=> Lnet/hockeyapp/android/tasks/CheckUpdateTask;->getURLString(Ljava/lang/String;)Ljava/lang/String; (0x9e) ---> Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver; Ljava/lang/String;)Ljava/lang/String;\"\n" +
+                "        },\n" +
+                "        \"DEBUGGABLE\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Debug\"\n" +
+                "            ],\n" +
+                "            \"title\": \"DEBUG mode is OFF(android:debuggable=\\\"false\\\") in AndroidManifest.xml.\",\n" +
+                "            \"summary\": \"Android Debug Mode Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SENSITIVE_SMS\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"Did not detect this app has code for sending SMS messages (sendDataMessage, sendMultipartTextMessage or sendTextMessage).\",\n" +
+                "            \"summary\": \"Codes for Sending SMS\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"MANIFEST_GCM\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"Nothing to suggest.\",\n" +
+                "            \"summary\": \"Google Cloud Messaging Suggestion\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"HACKER_INSTALL_SOURCE_CHECK\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"Hacker\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Did not detect this app checks for APK installer sources.\",\n" +
+                "            \"summary\": \"APK Installing Source Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"USE_PERMISSION_INTERNET\": {\n" +
+                "            \"count\": 0,\n" +
+                "            \"title\": \"This app is using the Internet via HTTP protocol.\",\n" +
+                "            \"summary\": \"Accessing the Internet Checking\",\n" +
+                "            \"level\": \"Info\"\n" +
+                "        },\n" +
+                "        \"SSL_X509\": {\n" +
+                "            \"count\": 4,\n" +
+                "            \"special_tag\": [\n" +
+                "                \"SSL_Security\"\n" +
+                "            ],\n" +
+                "            \"title\": \"Please make sure this app has the conditions to check the validation of SSL Certificate. If it's not properly checked, it MAY allows self-signed, expired or mismatch CN certificates for SSL connection.\\nThis is a critical vulnerability and allows attackers to do MITM attacks without your knowledge.\\nIf you are transmitting users' username or password, these sensitive information may be leaking.\\nReference:\\n(1)OWASP Mobile Top 10 doc: https://www.owasp.org/index.php/Mobile_Top_10_2014-M3\\n(2)Android Security book: http://goo.gl/BFb65r \\n(3)https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=134807561\\nThis vulnerability is much more severe than Apple's \\\"goto fail\\\" vulnerability: http://goo.gl/eFlovw\\nPlease do not try to create a \\\"X509Certificate\\\" and override \\\"checkClientTrusted\\\", \\\"checkServerTrusted\\\", and \\\"getAcceptedIssuers\\\" functions with blank implementation.\\nWe strongly suggest you use the existing API instead of creating your own X509Certificate class. \\nPlease modify or remove these vulnerable code: \",\n" +
+                "            \"level\": \"Warning\",\n" +
+                "            \"summary\": \"SSL Certificate Verification Checking\",\n" +
+                "            \"vector_details\": \"--------------------------------------------------\\n[Maybe Vulnerable (Please manually confirm)]\\n=> Lcom/github/kevinsawicki/http/HttpRequest$1;\\n      -> used by: Lcom/github/kevinsawicki/http/HttpRequest;->getTrustedFactory()Ljavax/net/ssl/SSLSocketFactory;\"\n" +
+                "        }\n" +
+                "    },\n" +
+                "    \"time_analyze\": 5.589407,\n" +
+                "    \"targetSdk\": 23,\n" +
+                "    \"file_sha256\": \"33b55ef9b540ce57b0e9e4d7dd5cbdc94a17a26b96394465f0e02684f307ed26\",\n" +
+                "    \"package_version_code\": 143,\n" +
+                "    \"signature_unique_analyze\": \"712fa25cc81c6c442c4a76498f032a20fa3de394f4c657dc0df92e28845470e848e532fd8ee7c34f914b982400aae74f1793aa02a20f97abce7d6549882a4dba\",\n" +
+                "    \"analyze_mode\": \"single\",\n" +
+                "    \"permission\": [\n" +
+                "        \"android.permission.INTERNET\",\n" +
+                "        \"android.permission.ACCESS_NETWORK_STATE\",\n" +
+                "        \"android.permission.WRITE_EXTERNAL_STORAGE\",\n" +
+                "        \"android.permission.GET_ACCOUNTS\",\n" +
+                "        \"android.permission.AUTHENTICATE_ACCOUNTS\",\n" +
+                "        \"android.permission.MANAGE_ACCOUNTS\",\n" +
+                "        \"android.permission.ACCESS_FINE_LOCATION\"\n" +
+                "    ],\n" +
+                "    \"file_md5\": \"14bad8b13a037a707577f803e39fc2e3\",\n" +
+                "    \"apk_file_size\": 13.066962242126465,\n" +
+                "    \"warning_vectors\": [\n" +
+                "        \"WEBVIEW_JS_ENABLED\",\n" +
+                "        \"EXTERNAL_STORAGE\",\n" +
+                "        \"SENSITIVE_SECURE_ANDROID_ID\",\n" +
+                "        \"WEBVIEW_ALLOW_FILE_ACCESS\",\n" +
+                "        \"SSL_X509\"\n" +
+                "    ],\n" +
+                "    \"violatedPreferenceList\": [\n" +
+                "        \"LOCATION\"\n" +
+                "    ],\n" +
+                "    \"analyze_engine_build\": 1,\n" +
+                "    \"package_version_name\": \"2.1.143-r-2016-03-16\",\n" +
+                "    \"minSdk\": 15,\n" +
+                "    \"info_vectors\": [\n" +
+                "        \"MASTER_KEY\",\n" +
+                "        \"DEBUGGABLE\",\n" +
+                "        \"HACKER_DEBUGGABLE_CHECK\",\n" +
+                "        \"USE_PERMISSION_ACCESS_MOCK_LOCATION\",\n" +
+                "        \"PERMISSION_GROUP_EMPTY_VALUE\",\n" +
+                "        \"USE_PERMISSION_SYSTEM_APP\",\n" +
+                "        \"MANIFEST_GCM\",\n" +
+                "        \"USE_PERMISSION_INTERNET\",\n" +
+                "        \"HACKER_BASE64_STRING_DECODE\",\n" +
+                "        \"HACKER_KEYSTORE_NO_PWD\",\n" +
+                "        \"HACKER_KEYSTORE_LOCATION1\",\n" +
+                "        \"KEYSTORE_TYPE_CHECK\",\n" +
+                "        \"HACKER_SIGNATURE_CHECK\",\n" +
+                "        \"HACKER_PREVENT_SCREENSHOT_CHECK\",\n" +
+                "        \"COMMAND\",\n" +
+                "        \"SSL_CN2\",\n" +
+                "        \"SSL_CN3\",\n" +
+                "        \"SSL_DEFAULT_SCHEME_NAME\",\n" +
+                "        \"SSL_WEBVIEW\",\n" +
+                "        \"HTTPURLCONNECTION_BUG\",\n" +
+                "        \"DB_DEPRECATED_USE1\",\n" +
+                "        \"MODE_WORLD_READABLE_OR_MODE_WORLD_WRITEABLE\",\n" +
+                "        \"FRAMEWORK_MONODROID\",\n" +
+                "        \"DYNAMIC_CODE_LOADING\",\n" +
+                "        \"FRAGMENT_INJECTION\",\n" +
+                "        \"PERMISSION_DANGEROUS\",\n" +
+                "        \"PERMISSION_NORMAL\",\n" +
+                "        \"PERMISSION_NO_PREFIX_EXPORTED\",\n" +
+                "        \"PERMISSION_PROVIDER_IMPLICIT_EXPORTED\",\n" +
+                "        \"PERMISSION_INTENT_FILTER_MISCONFIG\",\n" +
+                "        \"PERMISSION_IMPLICIT_SERVICE\",\n" +
+                "        \"DB_SQLCIPHER\",\n" +
+                "        \"DB_SEE\",\n" +
+                "        \"HACKER_DB_KEY\",\n" +
+                "        \"SENSITIVE_DEVICE_ID\",\n" +
+                "        \"SENSITIVE_SMS\",\n" +
+                "        \"SHARED_USER_ID\",\n" +
+                "        \"HACKER_INSTALL_SOURCE_CHECK\",\n" +
+                "        \"ALLOW_BACKUP\"\n" +
+                "    ],\n" +
+                "    \"file_sha1\": \"d7aa894620f6edf08cbeea9d1e134ff041153a31\",\n" +
+                "    \"file_sha512\": \"f9ce687c2de4c92c08b1694daa14523acbcf7d00322fa7401a469f77563b90f44f3d7e18e8fdf33d37f8af75f109c589dd0aec11032972a260816ce988b2470a\",\n" +
+                "    \"adheredPreferenceList\": [\n" +
+                "        \"CAMERA\",\n" +
+                "        \"PHONE\"\n" +
+                "    ],\n" +
+                "    \"_id\": {\n" +
+                "        \"$oid\": \"571eb33eecd2a31364e95687\"\n" +
+                "    },\n" +
+                "    \"time_total\": 20.238949,\n" +
+                "    \"analyze_status\": \"success\"\n" +
+                "}";
 }
