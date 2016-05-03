@@ -118,4 +118,20 @@ public class DbHandler extends SQLiteOpenHelper {
         db.update(table_name,vl,key_pname+"=?",new String[]{pname});
     }
 
+    public String getStatus(String pname){
+
+        String query = "SELECT stat FROM  "+ table_name + " WHERE packagename='"+pname+"'";
+        String stat ="";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cr = db.rawQuery(query, null);
+
+        if(cr.moveToFirst()){
+            do{
+                stat = cr.getString(0);
+            }while(cr.moveToNext());
+        }
+
+        return stat;
+    }
+
 }
