@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<AppUploadedInfo> adapter = new UploadListAdapter(getApplicationContext(),R.layout.uploadlist_view,uploadedApp);
         lvUploadList.setAdapter(adapter);
+
+        Intent itM = getIntent();
     }
 
     @Override

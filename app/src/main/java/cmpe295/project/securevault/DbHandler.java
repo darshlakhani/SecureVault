@@ -24,6 +24,7 @@ public class DbHandler extends SQLiteOpenHelper {
     private static final String key_status = "stat";
     private static final String key_pname = "packagename";
     private static final String key_pref = "preferences";
+    private static final String key_result = "result";
     SQLiteDatabase db;
 
     public DbHandler(Context context) {
@@ -33,7 +34,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String create_app_table = "CREATE TABLE  "+ table_name + " (appname TEXT, packagename TEXT UNIQUE, stat TEXT, preferences TEXT )";
+        String create_app_table = "CREATE TABLE  "+ table_name + " (appname TEXT, packagename TEXT UNIQUE, stat TEXT, preferences TEXT, result TEXT )";
         db.execSQL(create_app_table);
 
     }
@@ -54,6 +55,7 @@ public class DbHandler extends SQLiteOpenHelper {
         vl.put(key_name, app.appname);
         vl.put(key_status, "Scanning");
         vl.put(key_pref, pref);
+        vl.put(key_result, "");
         Log.i("DB", pref);
         db.insert(table_name, null, vl);
         db.close();
@@ -79,5 +81,39 @@ public class DbHandler extends SQLiteOpenHelper {
         cr.close();
         return pack;
 
+    }
+
+    public  void updateStatus(String st, String pname)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues vl = new ContentValues();
+        vl.put(key_status, st);
+        db.update(table_name,vl, key_pname+"=?",new String[]{pname});
+        db.close();
+    }
+
+    public  String getThreat(String pname)
+    {
+        String query = "SELECT result FROM  "+ table_name + " WHERE packagename='"+pname+"'";
+        String result ="";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cr = db.rawQuery(query, null);
+
+        if(cr.moveToFirst()){
+            do{
+                result = cr.getString(0);
+            }while(cr.moveToNext());
+        }
+
+       return result;
+    }
+
+    public void updateThreat(String status, String result, String pname){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues vl = new ContentValues();
+
+        vl.put(key_status, status);
+        vl.put(key_result,result);
+        db.update(table_name,vl,key_pname+"=?",new String[]{pname});
     }
 }
