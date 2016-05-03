@@ -93,6 +93,10 @@
     <orderEntry type="library" exported="" name="MPAndroidChart-v2.2.4" level="project" />
     <orderEntry type="library" exported="" name="retrofit-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="converter-gson-2.0.1" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" exported="" name="commons-io-1.3.2" level="project" />
+>>>>>>> 1d88d007166ee8fcff49f3d46892ffaff5d65d3e
     <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-8.1.0" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />

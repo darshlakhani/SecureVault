@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<AppUploadedInfo> adapter = new UploadListAdapter(getApplicationContext(), R.layout.uploadlist_view, uploadedApp);
         lvUploadList.setAdapter(adapter);
 
+
         //Result view navigation - Amogh
         lvUploadList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
     }
 
     @Override
