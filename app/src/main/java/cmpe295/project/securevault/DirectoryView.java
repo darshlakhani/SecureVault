@@ -55,9 +55,9 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
     AlertDialog alert;
     int position2;
     String failedPname;
-    String[] pref = {"Contacts", "SMS", "Camera", "Calendar", "Location", "Microphone", "Phone", "Sensors", "Storage"};
+    String[] pref = {"CONTACTS", "SMS", "CAMERA", "CALENDAR", "LOCATION", "MICROPHONE", "PHONE", "SENSORS", "STORAGE"};
 
-    public static String API = "http://54.183.204.113:8081";
+    public static String API = "http://54.183.204.113:8081"; //http://54.183.204.113:8081
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,7 +123,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
                     @Override
                     public void onClick(final DialogInterface dialog, final int id) {
                         //cancel click
-                        String selected_pref = "";
+                        String selected_pref ="";
                         for (int i = 0; i < mSelectedItems.size(); i++) {
                             selected_pref = selected_pref + "," + pref[(Integer) mSelectedItems.get(i)];
                         }
@@ -252,6 +252,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
 
 
         RequestBody description = RequestBody.create(MediaType.parse("multipart/form-data; boundary=12345"), pname);
+
 
         Call<ResponseBody> call = rtapi.uploadApk(body,preference);
 
