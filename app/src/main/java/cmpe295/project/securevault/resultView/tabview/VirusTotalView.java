@@ -15,6 +15,7 @@ public class VirusTotalView extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        String resultJSON = getArguments().getString("resultJSON");
         return inflater.inflate(R.layout.virustotal_view_fragment_3, container, false);
     }
 }

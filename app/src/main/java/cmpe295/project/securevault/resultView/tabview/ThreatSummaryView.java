@@ -35,17 +35,23 @@ import cmpe295.project.securevault.resultView.detailView.WarningDetailView;
 public class ThreatSummaryView extends Fragment {
 
     PieChart chart;
-
+    String resultJSON;
+    float getCriticalPercentage;
+    float getWarningPercentage;
+    float getNoticePercentage;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        resultJSON = getArguments().getString("resultJSON");
         View v =  inflater.inflate(R.layout.threat_overview_fragment_1, container, false);
-
-
         //get char view, configure it set the data
-
         chart = (PieChart) v.findViewById(R.id.chart);
         ChartResult chartHandler = new ChartResult(chart,"ThreatSummary");
         chartHandler.setChartConfig();
+
+        //TODO: replace below hardcoding with getter
+        getCriticalPercentage = 20;
+        getWarningPercentage = 30;
+        getNoticePercentage = 50;
         chartHandler.setData();
         return v;
 
@@ -78,9 +84,9 @@ public class ThreatSummaryView extends Fragment {
             ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
             // set yVals percentage,index
-            yVals1.add(new Entry(20,0));
-            yVals1.add(new Entry(30,1));
-            yVals1.add(new Entry(50,2));
+            yVals1.add(new Entry(getCriticalPercentage,0));
+            yVals1.add(new Entry(getWarningPercentage,1));
+            yVals1.add(new Entry(getNoticePercentage,2));
 
             ArrayList<String> xVals = new ArrayList<String>();
 
@@ -146,19 +152,19 @@ public class ThreatSummaryView extends Fragment {
                         //Call ResultView activity
                         Intent intent = new Intent(getContext(), CriticalDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }else if(dataIndex == Constants.WARNING_INDEX){
                         Intent intent = new Intent(getContext(), WarningDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }else if(dataIndex  == Constants.NOTICE_INDEX){
                         Intent intent = new Intent(getContext(), NoticeDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }

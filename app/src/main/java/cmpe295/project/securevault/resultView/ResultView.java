@@ -1,5 +1,6 @@
 package cmpe295.project.securevault.resultView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
@@ -45,10 +46,10 @@ public class ResultView extends AppCompatActivity  {
         chartHandler.setData(3, 100);*/
 
         // preparing list data and add it into list view
-       /* Intent intent = getIntent();
+        Intent intent = getIntent();
         String resultString = intent.getStringExtra("resultJSON");
         //prepareListData(resultString);
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        /*listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);*/
 
@@ -64,7 +65,7 @@ public class ResultView extends AppCompatActivity  {
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter adapter = new TabPagerAdapter
-                (getSupportFragmentManager(), tabLayout.getTabCount());
+                (getSupportFragmentManager(), tabLayout.getTabCount(),resultString);
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

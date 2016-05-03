@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         uList.add("Two");*/
 
 
-        DbHandler db = new DbHandler(this);
+        final DbHandler db = new DbHandler(this);
 
         final List<AppUploadedInfo> uploadedApp = db.getAllApp();
 
@@ -68,12 +68,17 @@ public class MainActivity extends AppCompatActivity {
         lvUploadList.setAdapter(adapter);
 
 
-        //Result view navigation - Amogh
+        //Result view navigation
         lvUploadList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
+                // TODO: Replace Constants.finalJson with 'resultJSON'
+                String packageName = "";
+                // fetch result from database based on package name
+                //String resultJSON = db.getThreat(packageName);
                 //Call ResultView activity
+
 
                 AppUploadedInfo clickedApp = uploadedApp.get(position);
                 Log.i("@@@@ clickedapp", clickedApp.pname);
@@ -83,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("packagename", clickedApp.pname);
                     startActivity(intent);
                 }
+
             }
         });
 
