@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,9 @@ public class UploadListAdapter extends ArrayAdapter<AppUploadedInfo> {
     Context context;
     List<AppUploadedInfo> ul;
     Drawable icon;
+
+    //Result view call
+
     public UploadListAdapter(Context context, int resource, List<AppUploadedInfo> objects) {
         super(context, resource, objects);
         this.context=context;

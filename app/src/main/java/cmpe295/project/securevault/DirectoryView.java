@@ -1,5 +1,4 @@
 package cmpe295.project.securevault;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -58,14 +57,14 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
     String failedPname;
     String[] pref = {"Contacts", "SMS", "Camera", "Calendar", "Location", "Microphone", "Phone", "Sensors", "Storage"};
 
-    public static String API = "http://10.0.0.12:8081";
+    public static String API = "http://54.183.204.113:8081";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.directory_view);
 
         db = new DbHandler(this);
-       List<PackageInfo> apps = getPackageManager().getInstalledPackages(0);
+        List<PackageInfo> apps = getPackageManager().getInstalledPackages(0);
 
 
         final ArrayList<AppInfo> res = new ArrayList<AppInfo>();
@@ -100,7 +99,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
                                     final int position, long id) {
 
 
-                 position2 = position;
+                position2 = position;
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(DirectoryView.this);
                 builder.setTitle("Select Your Preferences");
@@ -121,7 +120,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
                 });
 
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                   @Override
+                    @Override
                     public void onClick(final DialogInterface dialog, final int id) {
                         //cancel click
                         String selected_pref = "";
@@ -139,7 +138,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
                         }
 
                         db.uploadApp(res.get(position2), selected_pref);
-                       failedPname = res.get(position2).pname;
+                        failedPname = res.get(position2).pname;
                         Intent mactivity = new Intent(DirectoryView.this, MainActivity.class);
                         startActivity(mactivity);
                         //alert.dismiss();
@@ -156,7 +155,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
                 alert = builder.create();
                 alert.show();
 
-               // Toast.makeText(getBaseContext(),String.valueOf(position+1),Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getBaseContext(),String.valueOf(position+1),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -202,7 +201,7 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
 
         //db.updateStatus("Scan Failed","com.google.android.apps.docs.editors.docs");
         Log.i("@@@@ uploadApk", String.valueOf(t));
-         db.updateStatus("Scan Failed", failedPname);
+        db.updateStatus("Scan Failed", failedPname);
         Intent mactivity = new Intent(DirectoryView.this, MainActivity.class);
         startActivity(mactivity);
 
@@ -244,19 +243,19 @@ public class DirectoryView extends AppCompatActivity implements Callback<Respons
             throw new Exception(e);
         }
 
-            File fapk = new File("/"+pp[1]+"/"+pp[2]+"/"+pp[3]+"/base.apk");
+        File fapk = new File("/"+pp[1]+"/"+pp[2]+"/"+pp[3]+"/base.apk");
 
 
-            RequestBody reqFile = RequestBody.create(MediaType.parse("application/octet-stream; boundary=12345"), fapk);
+        RequestBody reqFile = RequestBody.create(MediaType.parse("application/octet-stream; boundary=12345"), fapk);
 
-            MultipartBody.Part body = MultipartBody.Part.createFormData("upload", fapk.getName(), reqFile);
+        MultipartBody.Part body = MultipartBody.Part.createFormData("upload", fapk.getName(), reqFile);
 
 
-            RequestBody description = RequestBody.create(MediaType.parse("multipart/form-data; boundary=12345"), pname);
+        RequestBody description = RequestBody.create(MediaType.parse("multipart/form-data; boundary=12345"), pname);
 
-            Call<ResponseBody> call = rtapi.uploadApk(body,preference);
+        Call<ResponseBody> call = rtapi.uploadApk(body,preference);
 
-            call.enqueue(this);
+        call.enqueue(this);
 
     }
 }

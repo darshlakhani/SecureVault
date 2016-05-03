@@ -26,4 +26,5 @@ public interface UploadApis  {
 
     @GET("/v2/571d6016110000f53229107a")
     Call<ResponseBody> checkApi(@Query("test") String st);
+
 }

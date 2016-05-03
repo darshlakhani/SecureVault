@@ -92,6 +92,7 @@ public class DbHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+
     public  String getThreat(String pname)
     {
         String query = "SELECT result FROM  "+ table_name + " WHERE packagename='"+pname+"'";
@@ -116,4 +117,5 @@ public class DbHandler extends SQLiteOpenHelper {
         vl.put(key_result,result);
         db.update(table_name,vl,key_pname+"=?",new String[]{pname});
     }
+
 }
