@@ -46,8 +46,7 @@ public class ThreatSummaryView extends Fragment {
         chart = (PieChart) v.findViewById(R.id.chart);
         ChartResult chartHandler = new ChartResult(chart,"ThreatSummary");
         chartHandler.setChartConfig();
-        chartHandler.setData(3, 100);
-
+        chartHandler.setData();
         return v;
 
     }
@@ -75,25 +74,22 @@ public class ThreatSummaryView extends Fragment {
             l.setYEntrySpace(0f);
             l.setYOffset(0f);
         }
-        public void setData(int count, float range) {
-
-            float mult = range;
-
+        public void setData() {
             ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
-            // IMPORTANT: In a PieChart, no values (Entry) should have the same
-            // xIndex (even if from different DataSets), since no values can be
-            // drawn above each other.
-            for (int i = 0; i < count + 1; i++) {
-                yVals1.add(new Entry((float) (Math.random() * mult) + mult / 5, i));
-            }
+            // set yVals percentage,index
+            yVals1.add(new Entry(20,0));
+            yVals1.add(new Entry(30,1));
+            yVals1.add(new Entry(50,2));
 
             ArrayList<String> xVals = new ArrayList<String>();
 
-            for (int i = 0; i < count + 1; i++)
-                xVals.add("abcs");
+            // Label names
+            xVals.add("Critical");
+            xVals.add("Warning");
+            xVals.add("Notice");
 
-            PieDataSet dataSet = new PieDataSet(yVals1, "Election Results");
+            PieDataSet dataSet = new PieDataSet(yVals1, "Threat Summary");
             dataSet.setSliceSpace(3f);
             dataSet.setSelectionShift(5f);
 

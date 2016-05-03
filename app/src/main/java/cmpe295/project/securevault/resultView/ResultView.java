@@ -52,6 +52,7 @@ public class ResultView extends AppCompatActivity  {
         // setting list adapter
         expListView.setAdapter(listAdapter);*/
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
