@@ -20,6 +20,7 @@ public class PreferenceView extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        String resultJSON = getArguments().getString("resultJSON");
         View v =  inflater.inflate(R.layout.preference_view_fragment_2, container, false);
 
         //get char view, configure it set the data

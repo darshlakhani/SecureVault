@@ -35,14 +35,12 @@ import cmpe295.project.securevault.resultView.detailView.WarningDetailView;
 public class ThreatSummaryView extends Fragment {
 
     PieChart chart;
-
+    String resultJSON;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        resultJSON = getArguments().getString("resultJSON");
         View v =  inflater.inflate(R.layout.threat_overview_fragment_1, container, false);
-
-
         //get char view, configure it set the data
-
         chart = (PieChart) v.findViewById(R.id.chart);
         ChartResult chartHandler = new ChartResult(chart,"ThreatSummary");
         chartHandler.setChartConfig();
@@ -146,19 +144,19 @@ public class ThreatSummaryView extends Fragment {
                         //Call ResultView activity
                         Intent intent = new Intent(getContext(), CriticalDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }else if(dataIndex == Constants.WARNING_INDEX){
                         Intent intent = new Intent(getContext(), WarningDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }else if(dataIndex  == Constants.NOTICE_INDEX){
                         Intent intent = new Intent(getContext(), NoticeDetailView.class);
 
-                        intent.putExtra("resultJSON", Constants.jsonStrings);
+                        intent.putExtra("resultJSON", resultJSON);
                         startActivity(intent);
 
                     }
