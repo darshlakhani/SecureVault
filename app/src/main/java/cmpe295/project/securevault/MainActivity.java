@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         final DbHandler db = new DbHandler(this);
 
-        List<AppUploadedInfo> uploadedApp = db.getAllApp();
+        final List<AppUploadedInfo> uploadedApp = db.getAllApp();
 
         ArrayAdapter<AppUploadedInfo> adapter = new UploadListAdapter(getApplicationContext(), R.layout.uploadlist_view, uploadedApp);
         lvUploadList.setAdapter(adapter);
@@ -77,11 +78,17 @@ public class MainActivity extends AppCompatActivity {
                 // fetch result from database based on package name
                 //String resultJSON = db.getThreat(packageName);
                 //Call ResultView activity
-                Intent intent = new Intent(getApplicationContext(), ResultView.class);
 
 
-                intent.putExtra("resultJSON", Constants.finalJson);
-                startActivity(intent);
+                AppUploadedInfo clickedApp = uploadedApp.get(position);
+                Log.i("@@@@ clickedapp", clickedApp.pname);
+                if(clickedApp.status == "Scanned") {
+                    Intent intent = new Intent(getApplicationContext(), ResultView.class);
+                    intent.putExtra("resultJSON", Constants.jsonStrings);
+                    intent.putExtra("packagename", clickedApp.pname);
+                    startActivity(intent);
+                }
+
             }
         });
 
