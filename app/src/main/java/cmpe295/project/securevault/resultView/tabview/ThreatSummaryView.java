@@ -28,6 +28,7 @@ import cmpe295.project.securevault.resultView.detailView.CriticalDetailView;
 
 import cmpe295.project.securevault.resultView.detailView.NoticeDetailView;
 import cmpe295.project.securevault.resultView.detailView.WarningDetailView;
+import cmpe295.project.securevault.resultView.resultDataHelper.ThreatSummaryViewResult;
 
 /**
  * Created by raoa on 4/30/2016.
@@ -48,10 +49,11 @@ public class ThreatSummaryView extends Fragment {
         ChartResult chartHandler = new ChartResult(chart,"ThreatSummary");
         chartHandler.setChartConfig();
 
-        //TODO: replace below hardcoding with getter
-        getCriticalPercentage = 20;
-        getWarningPercentage = 30;
-        getNoticePercentage = 50;
+        ThreatSummaryViewResult threatSummaryViewResult = new ThreatSummaryViewResult(resultJSON);
+
+        getCriticalPercentage = threatSummaryViewResult.getCriticalPercent();
+        getWarningPercentage = threatSummaryViewResult.getWarningPercent();
+        getNoticePercentage = threatSummaryViewResult.getNoticePercent();
         chartHandler.setData();
         return v;
 
@@ -103,7 +105,7 @@ public class ThreatSummaryView extends Fragment {
 
             ArrayList<Integer> colors = new ArrayList<Integer>();
 
-            for (int c : ColorTemplate.VORDIPLOM_COLORS)
+            /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
                 colors.add(c);
 
             for (int c : ColorTemplate.JOYFUL_COLORS)
@@ -113,7 +115,7 @@ public class ThreatSummaryView extends Fragment {
                 colors.add(c);
 
             for (int c : ColorTemplate.LIBERTY_COLORS)
-                colors.add(c);
+                colors.add(c);*/
 
             for (int c : ColorTemplate.PASTEL_COLORS)
                 colors.add(c);

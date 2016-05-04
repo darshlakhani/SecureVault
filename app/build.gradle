@@ -39,5 +39,7 @@ dependencies {
 
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'org.json:json:20160212'
+
 
 }

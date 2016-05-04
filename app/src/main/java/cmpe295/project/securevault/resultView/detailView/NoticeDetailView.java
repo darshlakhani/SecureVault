@@ -1,5 +1,6 @@
 package cmpe295.project.securevault.resultView.detailView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,16 +12,19 @@ import java.util.List;
 
 import cmpe295.project.securevault.ExpandableListAdapter;
 import cmpe295.project.securevault.R;
+import cmpe295.project.securevault.resultView.resultDataHelper.ThreatSummaryViewResult;
+import cmpe295.project.securevault.resultView.resultDataHelper.Vector;
 
 /**
  * Created by raoa on 5/2/2016.
  */
 public class NoticeDetailView extends AppCompatActivity {
 
-    ExpandableListAdapter listAdapter;
+    DetailViewExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     static List<String> listDataHeader;
-    static HashMap<String, List<String>> listDataChild;
+    static HashMap<String, List<Vector>> listDataChild;
+    ThreatSummaryViewResult threatSummaryViewResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +35,11 @@ public class NoticeDetailView extends AppCompatActivity {
         // preparing list data and add it into list view
         Intent intent = getIntent();
         String resultString = intent.getStringExtra("resultJSON");
+
+        //get formatted data from helpers
+        threatSummaryViewResult = new ThreatSummaryViewResult(resultString);
         prepareListData();
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new DetailViewExpandableListAdapter(this, listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
     }
@@ -40,42 +47,41 @@ public class NoticeDetailView extends AppCompatActivity {
     /*
      * Preparing the list data
      */
-    public static void prepareListData() {
+    public  void prepareListData() {
+
 
 
         listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
+        listDataChild = new HashMap<String, List<Vector>>();
 
         // Adding child data
-        listDataHeader.add("Critical");
-        listDataHeader.add("Warning");
         listDataHeader.add("Notice");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("Android Debug Mode");
-        top250.add("Fragment Vulnerability");
-        top250.add("SSL Implementation");
-        top250.add("SSL Certificate Verification");
+        List<Vector> noticeList = new ArrayList<Vector>();
+        for (Vector vector:threatSummaryViewResult.getNotice()){
+            noticeList.add(vector);
+        }
+        listDataChild.put(listDataHeader.get(0), noticeList); // Header, Child data
+
+    }
+
+    class DetailViewExpandableListAdapter extends ExpandableListAdapter{
+        public DetailViewExpandableListAdapter(Context context, List<String> listDataHeader,
+                                               HashMap<String, List<Vector>> listChildData) {
+            super(context,listDataHeader,listChildData);
+        }
 
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("External Storage Accessing");
-        nowShowing.add("Getting IMEI and Device ID");
-        nowShowing.add("Getting ANDROID_ID");
-        nowShowing.add("Codes for Sending SMS");
-        nowShowing.add("WebView Local File Access Attacks Checking");
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("AndroidManifest Adb Backup");
-        comingSoon.add("Executing \"root\" or System Privilege");
-        comingSoon.add("Android SQLite Databases Encryption");
-        comingSoon.add("File Unsafe Delete");
-        comingSoon.add("KeyStore File Location");
+        @Override
+        public long getChildId(int groupPosition, int childPosition) {
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+            System.out.println("Child Clicked "+groupPosition+" "+childPosition);
+            Vector childObject = (Vector)getChild(groupPosition,childPosition);
+            //Toast.makeText(getApplicationContext(),childObject.getTitle(),Toast.LENGTH_LONG);
+            return childPosition;
+        }
     }
 
 }
