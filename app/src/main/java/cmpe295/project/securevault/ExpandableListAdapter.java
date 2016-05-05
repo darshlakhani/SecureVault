@@ -19,9 +19,9 @@ import cmpe295.project.securevault.resultView.resultDataHelper.Vector;
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> _listDataHeader; // header titles
+    protected List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<Vector>> _listDataChild;
+    protected HashMap<String, List<Vector>> _listDataChild;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<Vector>> listChildData) {

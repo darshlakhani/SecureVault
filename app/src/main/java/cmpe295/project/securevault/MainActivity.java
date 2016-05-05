@@ -73,18 +73,19 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
+                AppUploadedInfo clickedApp = uploadedApp.get(position);
                 // TODO: Replace Constants.finalJson with 'resultJSON'
-                String packageName = "";
+                String packageName = clickedApp.pname;
                 // fetch result from database based on package name
-                //String resultJSON = db.getThreat(packageName);
+                String resultJSON = db.getThreat(packageName);
                 //Call ResultView activity
 
 
-                AppUploadedInfo clickedApp = uploadedApp.get(position);
+
                 Log.i("@@@@ clickedapp", clickedApp.pname);
-                if(clickedApp.status == "Scanned") {
+                if(clickedApp.status.equals("Scanned")) {
                     Intent intent = new Intent(getApplicationContext(), ResultView.class);
-                    intent.putExtra("resultJSON", Constants.jsonStrings);
+                    intent.putExtra("resultJSON", resultJSON);
                     intent.putExtra("packagename", clickedApp.pname);
                     startActivity(intent);
                 }

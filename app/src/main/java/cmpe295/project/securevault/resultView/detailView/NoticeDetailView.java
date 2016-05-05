@@ -1,9 +1,13 @@
 package cmpe295.project.securevault.resultView.detailView;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -42,6 +46,42 @@ public class NoticeDetailView extends AppCompatActivity {
         listAdapter = new DetailViewExpandableListAdapter(this, listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                Log.i("groupPosition:", +groupPosition + "\tchildPosition:" + childPosition);
+                Vector childObject = (Vector) listAdapter.getChild(groupPosition, childPosition);
+                //Toast.makeText(getApplicationContext(),childObject.getTitle(),Toast.LENGTH_LONG);
+
+
+                //Create alert dialogue
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(NoticeDetailView.this);
+
+                // set title
+                alertDialogBuilder.setTitle(childObject.getSummary());
+
+                // set dialog message
+                alertDialogBuilder
+                        .setMessage(childObject.getTitle())
+                        .setCancelable(false)
+
+                        .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+                return true;
+            }
+        });
     }
 
     /*
@@ -69,19 +109,9 @@ public class NoticeDetailView extends AppCompatActivity {
     class DetailViewExpandableListAdapter extends ExpandableListAdapter{
         public DetailViewExpandableListAdapter(Context context, List<String> listDataHeader,
                                                HashMap<String, List<Vector>> listChildData) {
-            super(context,listDataHeader,listChildData);
+            super(context, listDataHeader, listChildData);
         }
 
-
-
-        @Override
-        public long getChildId(int groupPosition, int childPosition) {
-
-            System.out.println("Child Clicked "+groupPosition+" "+childPosition);
-            Vector childObject = (Vector)getChild(groupPosition,childPosition);
-            //Toast.makeText(getApplicationContext(),childObject.getTitle(),Toast.LENGTH_LONG);
-            return childPosition;
-        }
     }
 
 }
