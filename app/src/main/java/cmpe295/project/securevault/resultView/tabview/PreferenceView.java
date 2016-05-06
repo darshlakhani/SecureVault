@@ -1,9 +1,11 @@
 package cmpe295.project.securevault.resultView.tabview;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +55,7 @@ public class PreferenceView extends Fragment {
         ChartResult chartHandler = new ChartResult(chart, "Preference");
         chartHandler.setChartConfig();
 
-        PreferenceViewResult preferenceViewResult = new PreferenceViewResult(resultJSON);
+        preferenceViewResult = new PreferenceViewResult(resultJSON);
         violatedPrefPerct = preferenceViewResult.getViolatedPercent();
         adheredPrefPerct =   preferenceViewResult.getAdheredPercent();
 
@@ -152,31 +154,71 @@ public class PreferenceView extends Fragment {
 
             int dataIndex = e.getXIndex();
             switch (chartType){
-                case "ThreatSummary":
-                    if(dataIndex == Constants.CRITICAL_INDEX){
-                        // create critical details view
 
-                        //Call ResultView activity
-                        Intent intent = new Intent(getContext(), CriticalDetailView.class);
+                case "Preference":
+                    if(dataIndex == Constants.ADHERED_PREF_INDEX) {
+                        //Create alert dialogue
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
-                        intent.putExtra("resultJSON", resultJSON);
-                        startActivity(intent);
+                        // set title
+                        alertDialogBuilder.setTitle("Preferences Adhered by App");
 
-                    }else if(dataIndex == Constants.WARNING_INDEX){
-                        Intent intent = new Intent(getContext(), WarningDetailView.class);
+                        StringBuilder sb = new StringBuilder();
+                        for(String s:preferenceViewResult.getAdheredPreferences()){
+                            sb.append(s).append("\n");
+                        }
+                        // set dialog message
+                        alertDialogBuilder
+                                .setMessage(sb.toString())
 
-                        intent.putExtra("resultJSON", resultJSON);
-                        startActivity(intent);
+                                .setCancelable(false)
 
-                    }else if(dataIndex  == Constants.NOTICE_INDEX){
-                        Intent intent = new Intent(getContext(), NoticeDetailView.class);
+                                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // if this button is clicked, just close
+                                        // the dialog box and do nothing
+                                        dialog.cancel();
+                                    }
+                                });
 
-                        intent.putExtra("resultJSON", resultJSON);
-                        startActivity(intent);
+                        // create alert dialog
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+
+                        // show it
+                        alertDialog.show();
+                    }
+                    else if(dataIndex == Constants.VIOLATED_PREF_INDEX){
+                        //Create alert dialogue
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+
+                        // set title
+                        alertDialogBuilder.setTitle("Preferences Violated by App");
+
+                        StringBuilder sb = new StringBuilder();
+                        for(String s:preferenceViewResult.getViolatedPreferences()){
+                            sb.append(s).append("\n");
+                        }
+                        // set dialog message
+                        alertDialogBuilder
+                                .setMessage(sb.toString())
+                                .setCancelable(false)
+
+                                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // if this button is clicked, just close
+                                        // the dialog box and do nothing
+                                        dialog.cancel();
+                                    }
+                                });
+
+                        // create alert dialog
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+
+                        // show it
+                        alertDialog.show();
+
 
                     }
-                    break;
-                case "Preference":
 
                     break;
                 default:

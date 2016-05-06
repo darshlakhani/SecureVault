@@ -9,6 +9,8 @@ public class Constants {
        public  static int CRITICAL_INDEX = 0;
         public static int WARNING_INDEX = 1;
         public static int NOTICE_INDEX = 2;
+        public  static int ADHERED_PREF_INDEX = 0;
+        public  static int VIOLATED_PREF_INDEX = 1;
 
 
     public static String jsonStrings = "{\n" +

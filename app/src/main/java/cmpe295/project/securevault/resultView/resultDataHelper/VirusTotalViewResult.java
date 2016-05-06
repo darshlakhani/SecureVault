@@ -10,7 +10,7 @@ public class VirusTotalViewResult {
 	
 	final static String SCAN_COMPARE_RESULTS = "scanCompareResults";
 	final static String Threat_DETECTED = "detected";
-	
+	final static String THREAT_NAME = "result";
 	
 	//McAfee , BitDefender, Baidu, Symantec, Avast, Kaspersky, Comodo, Microsoft, AVG,
 	final static String MCAFEE = "McAfee";
@@ -67,8 +67,8 @@ public class VirusTotalViewResult {
 				antiVirusResultJson = scannedResultJson.getJSONObject(antiVirus);
 				Boolean detected = antiVirusResultJson.getBoolean(Threat_DETECTED);
 				antiVirusResult.setDetected((detected));
-				
-				
+				String threatName = antiVirusResultJson.getString(THREAT_NAME);
+				antiVirusResult.setVirusName(threatName);
 				
 			}
 			catch(Exception e)

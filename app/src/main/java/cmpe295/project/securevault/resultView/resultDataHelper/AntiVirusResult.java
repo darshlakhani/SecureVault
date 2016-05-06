@@ -4,9 +4,15 @@ public class AntiVirusResult {
 	
 	String name;
 	boolean detected;
-	
-	
-	
+	String virusName;
+
+
+	public String getVirusName() {
+		return virusName;
+	}
+	public void setVirusName(String virusName) {
+		this.virusName = virusName;
+	}
 	public String getName() {
 		return name;
 	}
