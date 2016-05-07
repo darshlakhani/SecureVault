@@ -50,12 +50,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DirectoryView extends AppCompatActivity implements Callback<ResponseBody> {
     private String path;
     ListView lvDirectory;
-    DbHandler db;
+    public static DbHandler db;
     List mSelectedItems = new ArrayList();
     AlertDialog alert;
     int position2;
     String failedPname;
-    String[] pref = {"CONTACTS", "SMS", "CAMERA", "CALENDAR", "LOCATION", "MICROPHONE", "PHONE", "SENSORS", "STORAGE"};
+    public static String[] pref = {"CONTACTS", "SMS", "CAMERA", "CALENDAR", "LOCATION", "MICROPHONE", "PHONE", "SENSORS", "STORAGE"};
 
     public static String API = "http://54.183.204.113:8081"; //http://54.183.204.113:8081
     @Override

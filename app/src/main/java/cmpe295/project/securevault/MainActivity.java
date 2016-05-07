@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -20,6 +21,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.List;
 
+import cmpe295.project.securevault.pastePackageName.PastePackageNameActivity;
 import cmpe295.project.securevault.resultView.ResultView;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent uploadAct = new Intent(MainActivity.this, DirectoryView.class);
 
                 startActivity(uploadAct);
+
+            }
+        });
+
+        // Paste package name. Package name functionality
+        FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.packageNamePaste);
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PastePackageNameActivity.class);
+                startActivity(intent);
 
             }
         });

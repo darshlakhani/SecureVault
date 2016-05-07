@@ -52,6 +52,10 @@ public class UploadListAdapter extends ArrayAdapter<AppUploadedInfo> {
             String pname = viewApp.pname;
             String appname = viewApp.appname;
             String stat = viewApp.status;
+            if(viewApp.appname!=null && viewApp.appname.equals("upload")){
+                appname = pname;
+                icon = getContext().getDrawable(R.drawable.ic_playstore);
+            }else{
 
             ///from package name get AppInfo and display
             PackageManager packageManager = context.getPackageManager();
@@ -65,6 +69,8 @@ public class UploadListAdapter extends ArrayAdapter<AppUploadedInfo> {
                 Log.i("UploadList", "Error");
             }
 
+
+            }
             tvUploadName.setText(appname);
             ivUploadedImage.setImageDrawable(icon);
             tvStatus.setText(stat);

@@ -7,9 +7,9 @@ import android.graphics.drawable.Drawable;
  */
 public class AppInfo {
 
-    String appname = "";
-    String pname = "";
-    String versionName = "";
-    int versionCode = 0;
-    Drawable icon;
+    public String appname = "";
+    public String pname = "";
+    public String versionName = "";
+    public int versionCode = 0;
+    public Drawable icon;
 }

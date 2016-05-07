@@ -109,6 +109,20 @@ public class DbHandler extends SQLiteOpenHelper {
        return result;
     }
 
+
+    public  boolean isRecordPresent(String pname)
+    {
+        String query = "SELECT result FROM  "+ table_name + " WHERE packagename='"+pname+"'";
+        Cursor cursor = db.rawQuery(query, null);
+        if(cursor.getCount() <= 0){
+            cursor.close();
+            return Boolean.FALSE;
+        }
+        cursor.close();
+        return Boolean.TRUE;
+
+    }
+
     public void updateThreat(String status, String result, String pname){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues vl = new ContentValues();
