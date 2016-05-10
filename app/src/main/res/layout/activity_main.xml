@@ -16,6 +16,11 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />
+    <include layout="@layout/activity_critical_detail_view" />
+    <include layout="@layout/activity_notice_detail_view" />
+    <include layout="@layout/activity_result_view" />
+    <include layout="@layout/activity_warning_detail_view" />
+    <include layout="@layout/preference_activity" />
 
 
 
