@@ -135,6 +135,7 @@ public class ThreatSummaryView extends Fragment {
             // undo all highlights
             chart.highlightValues(null);
 
+
             chart.invalidate();
         }
 

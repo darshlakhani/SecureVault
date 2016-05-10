@@ -15,6 +15,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,6 +44,10 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".resultView.detailView.NoticeDetailView"
+            android:label="@string/title_activity_notice_detail_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".pastePackageName.PastePackageNameActivity"
             android:label="@string/title_activity_notice_detail_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

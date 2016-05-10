@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,10 @@ public class PastePackageNameActivity  extends AppCompatActivity implements Call
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paste_package_name);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Play Store Link");
+        setSupportActionBar(toolbar);
+
         scanButton = (Button)findViewById(R.id.scan);
         db =   new DbHandler(this);
         packageNameEditText = (EditText)findViewById(R.id.editText);
@@ -56,6 +61,9 @@ public class PastePackageNameActivity  extends AppCompatActivity implements Call
                 String packageName = packageNameEditText.getText().toString();
                 //check if packagename is valid
                 if(isPackageNameValid(packageName)){
+                    if(packageName!=null && packageName.length()>0 && packageName.contains("id=")){
+                        packageName = packageName.substring(packageName.indexOf("id=")+3,packageName.length());
+                    }
                      pname = packageName;
                     // check in database if results exists
                     if(isResultPresentinDB(packageName)){
