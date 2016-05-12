@@ -83,7 +83,7 @@ public class VirusTotalView extends Fragment {
             textView.setText(titleValues[position]);
 
             if(values.get(position)!=null && values.get(position).isDetected()){
-                virusNameTextView.setText(values.get(position).getName());
+                virusNameTextView.setText(values.get(position).getVirusName());
                 imageView.setImageResource(R.drawable.ic_detected);
             }else{
                 virusNameTextView.setText("Not Detected");
